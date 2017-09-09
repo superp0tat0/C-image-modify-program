@@ -1,0 +1,405 @@
+==========StudentID: group_0209 ================================
+Invoking: timeout 10s ./sanity.sh 
+===== Testing compilation and error messages =====
+Testing one_process
+Test 1a: one_process with illegal argument should print errors:
+T1a: passed
+
+Test 1b: one_process with illegal destination should print errors:
+T1b: passed
+
+Testing image_retrieval
+Test 1a: image_retrieval with illegal argument should print errors:
+T1a: passed
+
+Test 1b: image_retrieval with illegal destination should print errors:
+T1b: passed
+
+COMPILATION AND ERRORS (out of 25): 25.00
+===== Test Cases without Errors =====
+============Testing one_process==============
+[INFO]: Testing with similar_images_multiple_small and expecting any of: small_02.ppm, small_dis13_1.ppm, small_dis13_2.ppm, small_dis13_3.ppm
+[INFO]: Testing with -d option
+Invoking: timeout 30s one_process -d ../A3_testcases/similar_images_multiple_small ../A3_testcases//source_images/similar_images_multiple_small.ppm
+Processing all images in directory: ../A3_testcases/similar_images_multiple_small/subfolder 
+The most similar image is ../A3_testcases/similar_images_multiple_small/subfolder/small_dis13_3.ppm with a distance of 0.812500
+[SUCCESS]: [CASE]: similar_images_multiple_small
+
+[INFO]: Testing without -d option
+Invoking: timeout 30s one_process ../source_images/similar_images_multiple_small.ppm
+Processing all images in directory: ./subfolder 
+The most similar image is ./subfolder/small_dis13_3.ppm with a distance of 0.812500
+[SUCCESS]: [CASE]: similar_images_multiple_small
+
+[INFO]: Testing with similar_images_with_diff_size and expecting: No output or atleast program should not crash
+[INFO]: Testing with -d option
+Invoking: timeout 30s one_process -d ../A3_testcases/similar_images_with_diff_size ../A3_testcases//source_images/similar_images_with_diff_size.ppm
+Processing all images in directory: ../A3_testcases/similar_images_with_diff_size/subfolder 
+The most similar image is  with a distance of 340282346638528859811704183484516925440.000000
+[SUCCESS]: [CASE]: similar_images_with_diff_size
+
+[INFO]: Testing with similar_images_unique_small and expecting: small_05.ppm
+[INFO]: Testing with -d option
+Invoking: timeout 30s one_process -d ../A3_testcases/similar_images_unique_small ../A3_testcases//source_images/similar_images_unique_small.ppm
+Processing all images in directory: ../A3_testcases/similar_images_unique_small/to_compare 
+The most similar image is ../A3_testcases/similar_images_unique_small/to_compare/small_05.ppm with a distance of 0.437500
+[SUCCESS]: [CASE]: similar_images_unique_small
+
+[INFO]: Testing without -d option
+Invoking: timeout 30s one_process ../source_images/similar_images_unique_small.ppm
+Processing all images in directory: ./to_compare 
+The most similar image is ./to_compare/small_05.ppm with a distance of 0.437500
+[SUCCESS]: [CASE]: similar_images_unique_small
+
+[INFO]: Testing with different_set_similar_images and expecting: table_03_cropped.ppm
+[INFO]: Testing with -d option
+Invoking: timeout 30s one_process -d ../A3_testcases/different_set_similar_images ../A3_testcases//source_images/different_set_similar_images.ppm
+Processing all images in directory: ../A3_testcases/different_set_similar_images/set1 
+The most similar image is ../A3_testcases/different_set_similar_images/set1/table_03_cropped.ppm with a distance of 0.277000
+[SUCCESS]: [CASE]: different_set_similar_images
+
+[INFO]: Testing without -d option
+Invoking: timeout 30s one_process ../source_images/different_set_similar_images.ppm
+Processing all images in directory: ./set1 
+The most similar image is ./set1/table_03_cropped.ppm with a distance of 0.277000
+[SUCCESS]: [CASE]: different_set_similar_images
+
+[INFO]: Testing with similar_images_unique_large and expecting: whale_00.ppm
+[INFO]: Testing with -d option
+Invoking: timeout 30s one_process -d ../A3_testcases/similar_images_unique_large ../A3_testcases//source_images/similar_images_unique_large.ppm
+Processing all images in directory: ../A3_testcases/similar_images_unique_large/subfolder 
+The most similar image is ../A3_testcases/similar_images_unique_large/subfolder/whale_00.ppm with a distance of 0.005431
+[SUCCESS]: [CASE]: similar_images_unique_large
+
+[INFO]: Testing without -d option
+Invoking: timeout 30s one_process ../source_images/similar_images_unique_large.ppm
+Processing all images in directory: ./subfolder 
+The most similar image is ./subfolder/whale_00.ppm with a distance of 0.005431
+[SUCCESS]: [CASE]: similar_images_unique_large
+
+[INFO]: Testing with mixed_valid_invalid_image and expecting: Basket_018.ppm
+[INFO]: Testing with -d option
+Invoking: timeout 30s one_process -d ../A3_testcases/mixed_valid_invalid_image ../A3_testcases//source_images/mixed_valid_invalid_image.ppm
+Image is an incompatible type.
+Image is an incompatible type.
+Image is an incompatible type.
+Image is an incompatible type.
+Image is an incompatible type.
+Image is an incompatible type.
+Processing all images in directory: ../A3_testcases/mixed_valid_invalid_image/sub 
+Processing all images in directory: ../A3_testcases/mixed_valid_invalid_image/sub3 
+Processing all images in directory: ../A3_testcases/mixed_valid_invalid_image/sub2 
+The most similar image is ../A3_testcases/mixed_valid_invalid_image/sub/Basket_018.ppm with a distance of 3.863884
+[SUCCESS]: [CASE]: mixed_valid_invalid_image
+
+[INFO]: Testing without -d option
+Invoking: timeout 30s one_process ../source_images/mixed_valid_invalid_image.ppm
+Image is an incompatible type.
+Image is an incompatible type.
+Image is an incompatible type.
+Image is an incompatible type.
+Image is an incompatible type.
+Image is an incompatible type.
+Processing all images in directory: ./sub 
+Processing all images in directory: ./sub3 
+Processing all images in directory: ./sub2 
+The most similar image is ./sub/Basket_018.ppm with a distance of 3.863884
+[SUCCESS]: [CASE]: mixed_valid_invalid_image
+
+[INFO]: Testing with many_small_pics and expecting: small_466.ppm
+[INFO]: Testing with -d option
+Invoking: timeout 30s one_process -d ../A3_testcases/many_small_pics ../A3_testcases//source_images/many_small_pics.ppm
+Processing all images in directory: ../A3_testcases/many_small_pics/sub4 
+Processing all images in directory: ../A3_testcases/many_small_pics/sub1 
+Processing all images in directory: ../A3_testcases/many_small_pics/sub3 
+Processing all images in directory: ../A3_testcases/many_small_pics/sub2 
+The most similar image is ../A3_testcases/many_small_pics/sub4/small_466.ppm with a distance of 1.562500
+[SUCCESS]: [CASE]: many_small_pics
+
+[INFO]: Testing without -d option
+Invoking: timeout 30s one_process ../source_images/many_small_pics.ppm
+Processing all images in directory: ./sub4 
+Processing all images in directory: ./sub1 
+Processing all images in directory: ./sub3 
+Processing all images in directory: ./sub2 
+The most similar image is ./sub4/small_466.ppm with a distance of 1.562500
+[SUCCESS]: [CASE]: many_small_pics
+
+[INFO]: Testing with valid_ppm_with_non_ppm_suffix and expecting: basket_01.jpg
+[INFO]: Testing with -d option
+Invoking: timeout 30s one_process -d ../A3_testcases/valid_ppm_with_non_ppm_suffix ../A3_testcases//source_images/valid_ppm_with_non_ppm_suffix.ppm
+Processing all images in directory: ../A3_testcases/valid_ppm_with_non_ppm_suffix/sub 
+The most similar image is ../A3_testcases/valid_ppm_with_non_ppm_suffix/sub/basket_01.jpg with a distance of 2.201077
+[INFO]: Testing distance for valid_ppm_with_non_ppm_suffix and expecting: 2.201077
+[SUCCESS]: [CASE]: distance for valid_ppm_with_non_ppm_suffix
+[SUCCESS]: [CASE]: valid_ppm_with_non_ppm_suffix
+
+[INFO]: Testing without -d option
+Invoking: timeout 30s one_process ../source_images/valid_ppm_with_non_ppm_suffix.ppm
+Processing all images in directory: ./sub 
+The most similar image is ./sub/basket_01.jpg with a distance of 2.201077
+[INFO]: Testing distance for valid_ppm_with_non_ppm_suffix and expecting: 2.201077
+[SUCCESS]: [CASE]: distance for valid_ppm_with_non_ppm_suffix
+[SUCCESS]: [CASE]: valid_ppm_with_non_ppm_suffix
+
+[INFO]: Testing with non_ppm_image and expecting: No output or atleast program should not crash
+[INFO]: Testing with -d option
+Invoking: timeout 30s one_process -d ../A3_testcases/non_ppm_image ../A3_testcases//source_images/non_ppm_image.ppm
+Image is an incompatible type.
+Image is an incompatible type.
+Image is an incompatible type.
+Image is an incompatible type.
+Image is an incompatible type.
+Image is an incompatible type.
+Image is an incompatible type.
+Processing all images in directory: ../A3_testcases/non_ppm_image/subfolder 
+The most similar image is  with a distance of 340282346638528859811704183484516925440.000000
+[SUCCESS]: [CASE]: non_ppm_image
+
+[INFO]: Testing with no_similar_images and expecting: basket_chopped.ppm
+[INFO]: Testing with -d option
+Invoking: timeout 30s one_process -d ../A3_testcases/no_similar_images ../A3_testcases//source_images/no_similar_images.ppm
+Processing all images in directory: ../A3_testcases/no_similar_images/subfolder 
+The most similar image is ../A3_testcases/no_similar_images/subfolder/basket_chopped.ppm with a distance of 118.488029
+[SUCCESS]: [CASE]: no_similar_images
+
+[INFO]: Testing without -d option
+Invoking: timeout 30s one_process ../source_images/no_similar_images.ppm
+Processing all images in directory: ./subfolder 
+The most similar image is ./subfolder/basket_chopped.ppm with a distance of 118.488029
+[SUCCESS]: [CASE]: no_similar_images
+
+[INFO]: Testing with distinct_large_picture and expecting: big_table_cropped.ppm
+[INFO]: Testing with -d option
+Invoking: timeout 30s one_process -d ../A3_testcases/distinct_large_picture ../A3_testcases//source_images/distinct_large_picture.ppm
+Processing all images in directory: ../A3_testcases/distinct_large_picture/sub 
+The most similar image is ../A3_testcases/distinct_large_picture/sub/big_table_cropped.ppm with a distance of 122.558945
+[INFO]: Testing distance for distinct_large_picture and expecting: 122.558945
+[SUCCESS]: [CASE]: distance for distinct_large_picture
+[SUCCESS]: [CASE]: distinct_large_picture
+
+[INFO]: Testing without -d option
+Invoking: timeout 30s one_process ../source_images/distinct_large_picture.ppm
+Processing all images in directory: ./sub 
+The most similar image is ./sub/big_table_cropped.ppm with a distance of 122.558945
+[INFO]: Testing distance for distinct_large_picture and expecting: 122.558945
+[SUCCESS]: [CASE]: distance for distinct_large_picture
+[SUCCESS]: [CASE]: distinct_large_picture
+
+[INFO]: Testing with actual_same_image and expecting: big_table_chopped.ppm
+[INFO]: Testing with -d option
+Invoking: timeout 30s one_process -d ../A3_testcases/actual_same_image ../A3_testcases//source_images/actual_same_image.ppm
+Processing all images in directory: ../A3_testcases/actual_same_image/subfolder2 
+Processing all images in directory: ../A3_testcases/actual_same_image/subfolder 
+The most similar image is ../A3_testcases/actual_same_image/subfolder/big_table_chopped.ppm with a distance of 0.000000
+[INFO]: Testing distance for actual_same_image and expecting: 0.000000
+[SUCCESS]: [CASE]: distance for actual_same_image
+[SUCCESS]: [CASE]: actual_same_image
+
+[INFO]: Testing without -d option
+Invoking: timeout 30s one_process ../source_images/actual_same_image.ppm
+Processing all images in directory: ./subfolder2 
+Processing all images in directory: ./subfolder 
+The most similar image is ./subfolder/big_table_chopped.ppm with a distance of 0.000000
+[INFO]: Testing distance for actual_same_image and expecting: 0.000000
+[SUCCESS]: [CASE]: distance for actual_same_image
+[SUCCESS]: [CASE]: actual_same_image
+
+[INFO]: Testing with no_sub_folder and expecting: No output or atleast program should not crash
+[INFO]: Testing with -d option
+Invoking: timeout 30s one_process -d ../A3_testcases/no_sub_folder ../A3_testcases//source_images/no_sub_folder.ppm
+The most similar image is  with a distance of 340282346638528859811704183484516925440.000000
+[SUCCESS]: [CASE]: no_sub_folder
+
+============Testing image_retrieval==============
+[INFO]: Testing with similar_images_multiple_small and expecting any of: small_02.ppm, small_dis13_1.ppm, small_dis13_2.ppm, small_dis13_3.ppm
+[INFO]: Testing with -d option
+Invoking: timeout 30s image_retrieval -d ../A3_testcases/similar_images_multiple_small ../A3_testcases//source_images/similar_images_multiple_small.ppm
+Processing all images in directory: ../A3_testcases/similar_images_multiple_small/subfolder 
+The most similar image is ../A3_testcases/similar_images_multiple_small/subfolder/small_dis13_3.ppm with a distance of 0.812500
+[SUCCESS]: [CASE]: similar_images_multiple_small
+
+[INFO]: Testing without -d option
+Invoking: timeout 30s image_retrieval ../source_images/similar_images_multiple_small.ppm
+The most similar image is ./subfolder/small_dis13_3.ppm with a distance of 0.812500
+Processing all images in directory: ./subfolder 
+[FAIL]: [CASE] similar_images_multiple_small
+
+[INFO]: Testing with similar_images_with_diff_size and expecting: No output or atleast program should not crash
+[INFO]: Testing with -d option
+Invoking: timeout 30s image_retrieval -d ../A3_testcases/similar_images_with_diff_size ../A3_testcases//source_images/similar_images_with_diff_size.ppm
+The most similar image is  with a distance of 340282346638528859811704183484516925440.000000
+Processing all images in directory: ../A3_testcases/similar_images_with_diff_size/subfolder 
+[SUCCESS]: [CASE]: similar_images_with_diff_size
+
+[INFO]: Testing with similar_images_unique_small and expecting: small_05.ppm
+[INFO]: Testing with -d option
+Invoking: timeout 30s image_retrieval -d ../A3_testcases/similar_images_unique_small ../A3_testcases//source_images/similar_images_unique_small.ppm
+The most similar image is ../A3_testcases/similar_images_unique_small/to_compare/small_05.ppm with a distance of 0.437500
+Processing all images in directory: ../A3_testcases/similar_images_unique_small/to_compare 
+[FAIL]: [CASE] similar_images_unique_small
+
+[INFO]: Testing without -d option
+Invoking: timeout 30s image_retrieval ../source_images/similar_images_unique_small.ppm
+The most similar image is ./to_compare/small_05.ppm with a distance of 0.437500
+Processing all images in directory: ./to_compare 
+[FAIL]: [CASE] similar_images_unique_small
+
+[INFO]: Testing with different_set_similar_images and expecting: table_03_cropped.ppm
+[INFO]: Testing with -d option
+Invoking: timeout 30s image_retrieval -d ../A3_testcases/different_set_similar_images ../A3_testcases//source_images/different_set_similar_images.ppm
+The most similar image is ../A3_testcases/different_set_similar_images/set1/table_03_cropped.ppm with a distance of 0.277000
+Processing all images in directory: ../A3_testcases/different_set_similar_images/set1 
+[FAIL]: [CASE] different_set_similar_images
+
+[INFO]: Testing without -d option
+Invoking: timeout 30s image_retrieval ../source_images/different_set_similar_images.ppm
+The most similar image is ./set1/table_03_cropped.ppm with a distance of 0.277000
+Processing all images in directory: ./set1 
+[FAIL]: [CASE] different_set_similar_images
+
+[INFO]: Testing with similar_images_unique_large and expecting: whale_00.ppm
+[INFO]: Testing with -d option
+Invoking: timeout 30s image_retrieval -d ../A3_testcases/similar_images_unique_large ../A3_testcases//source_images/similar_images_unique_large.ppm
+Processing all images in directory: ../A3_testcases/similar_images_unique_large/subfolder 
+The most similar image is ../A3_testcases/similar_images_unique_large/subfolder/whale_00.ppm with a distance of 0.005431
+[SUCCESS]: [CASE]: similar_images_unique_large
+
+[INFO]: Testing without -d option
+Invoking: timeout 30s image_retrieval ../source_images/similar_images_unique_large.ppm
+Processing all images in directory: ./subfolder 
+The most similar image is ./subfolder/whale_00.ppm with a distance of 0.005431
+[SUCCESS]: [CASE]: similar_images_unique_large
+
+[INFO]: Testing with mixed_valid_invalid_image and expecting: Basket_018.ppm
+[INFO]: Testing with -d option
+Invoking: timeout 30s image_retrieval -d ../A3_testcases/mixed_valid_invalid_image ../A3_testcases//source_images/mixed_valid_invalid_image.ppm
+Image is an incompatible type.
+Image is an incompatible type.
+Image is an incompatible type.
+Image is an incompatible type.
+Image is an incompatible type.
+Processing all images in directory: ../A3_testcases/mixed_valid_invalid_image/sub 
+Image is an incompatible type.
+Processing all images in directory: ../A3_testcases/mixed_valid_invalid_image/sub3 
+The most similar image is ../A3_testcases/mixed_valid_invalid_image/sub/Basket_018.ppm with a distance of 3.863884
+Processing all images in directory: ../A3_testcases/mixed_valid_invalid_image/sub2 
+[FAIL]: [CASE] mixed_valid_invalid_image
+
+[INFO]: Testing without -d option
+Invoking: timeout 30s image_retrieval ../source_images/mixed_valid_invalid_image.ppm
+Image is an incompatible type.
+Image is an incompatible type.
+Image is an incompatible type.
+Image is an incompatible type.
+Image is an incompatible type.
+Processing all images in directory: ./sub 
+Image is an incompatible type.
+Processing all images in directory: ./sub3 
+The most similar image is ./sub/Basket_018.ppm with a distance of 3.863884
+Processing all images in directory: ./sub2 
+[FAIL]: [CASE] mixed_valid_invalid_image
+
+[INFO]: Testing with many_small_pics and expecting: small_466.ppm
+[INFO]: Testing with -d option
+Invoking: timeout 30s image_retrieval -d ../A3_testcases/many_small_pics ../A3_testcases//source_images/many_small_pics.ppm
+Processing all images in directory: ../A3_testcases/many_small_pics/sub4 
+Processing all images in directory: ../A3_testcases/many_small_pics/sub1 
+Processing all images in directory: ../A3_testcases/many_small_pics/sub3 
+Processing all images in directory: ../A3_testcases/many_small_pics/sub2 
+The most similar image is ../A3_testcases/many_small_pics/sub4/small_466.ppm with a distance of 1.562500
+[SUCCESS]: [CASE]: many_small_pics
+
+[INFO]: Testing without -d option
+Invoking: timeout 30s image_retrieval ../source_images/many_small_pics.ppm
+Processing all images in directory: ./sub4 
+Processing all images in directory: ./sub1 
+Processing all images in directory: ./sub3 
+Processing all images in directory: ./sub2 
+The most similar image is ./sub4/small_466.ppm with a distance of 1.562500
+[SUCCESS]: [CASE]: many_small_pics
+
+[INFO]: Testing with valid_ppm_with_non_ppm_suffix and expecting: basket_01.jpg
+[INFO]: Testing with -d option
+Invoking: timeout 30s image_retrieval -d ../A3_testcases/valid_ppm_with_non_ppm_suffix ../A3_testcases//source_images/valid_ppm_with_non_ppm_suffix.ppm
+Processing all images in directory: ../A3_testcases/valid_ppm_with_non_ppm_suffix/sub 
+The most similar image is ../A3_testcases/valid_ppm_with_non_ppm_suffix/sub/basket_01.jpg with a distance of 2.201077
+[INFO]: Testing distance for valid_ppm_with_non_ppm_suffix and expecting: 2.201077
+[SUCCESS]: [CASE]: distance for valid_ppm_with_non_ppm_suffix
+[SUCCESS]: [CASE]: valid_ppm_with_non_ppm_suffix
+
+[INFO]: Testing without -d option
+Invoking: timeout 30s image_retrieval ../source_images/valid_ppm_with_non_ppm_suffix.ppm
+The most similar image is ./sub/basket_01.jpg with a distance of 2.201077
+Processing all images in directory: ./sub 
+[INFO]: Testing distance for valid_ppm_with_non_ppm_suffix and expecting: 2.201077
+[FAIL]: [CASE] valid_ppm_with_non_ppm_suffix
+
+[INFO]: Testing with non_ppm_image and expecting: No output or atleast program should not crash
+[INFO]: Testing with -d option
+Invoking: timeout 30s image_retrieval -d ../A3_testcases/non_ppm_image ../A3_testcases//source_images/non_ppm_image.ppm
+Image is an incompatible type.
+Image is an incompatible type.
+Image is an incompatible type.
+Image is an incompatible type.
+Image is an incompatible type.
+Image is an incompatible type.
+Image is an incompatible type.
+The most similar image is  with a distance of 340282346638528859811704183484516925440.000000
+Processing all images in directory: ../A3_testcases/non_ppm_image/subfolder 
+[SUCCESS]: [CASE]: non_ppm_image
+
+[INFO]: Testing with no_similar_images and expecting: basket_chopped.ppm
+[INFO]: Testing with -d option
+Invoking: timeout 30s image_retrieval -d ../A3_testcases/no_similar_images ../A3_testcases//source_images/no_similar_images.ppm
+The most similar image is ../A3_testcases/no_similar_images/subfolder/basket_chopped.ppm with a distance of 118.488029
+Processing all images in directory: ../A3_testcases/no_similar_images/subfolder 
+[FAIL]: [CASE] no_similar_images
+
+[INFO]: Testing without -d option
+Invoking: timeout 30s image_retrieval ../source_images/no_similar_images.ppm
+The most similar image is ./subfolder/basket_chopped.ppm with a distance of 118.488029
+Processing all images in directory: ./subfolder 
+[FAIL]: [CASE] no_similar_images
+
+[INFO]: Testing with distinct_large_picture and expecting: big_table_cropped.ppm
+[INFO]: Testing with -d option
+Invoking: timeout 30s image_retrieval -d ../A3_testcases/distinct_large_picture ../A3_testcases//source_images/distinct_large_picture.ppm
+Processing all images in directory: ../A3_testcases/distinct_large_picture/sub 
+The most similar image is ../A3_testcases/distinct_large_picture/sub/big_table_cropped.ppm with a distance of 122.558945
+[INFO]: Testing distance for distinct_large_picture and expecting: 122.558945
+[SUCCESS]: [CASE]: distance for distinct_large_picture
+[SUCCESS]: [CASE]: distinct_large_picture
+
+[INFO]: Testing without -d option
+Invoking: timeout 30s image_retrieval ../source_images/distinct_large_picture.ppm
+The most similar image is ./sub/big_table_cropped.ppm with a distance of 122.558945
+Processing all images in directory: ./sub 
+[INFO]: Testing distance for distinct_large_picture and expecting: 122.558945
+[FAIL]: [CASE] distinct_large_picture
+
+[INFO]: Testing with actual_same_image and expecting: big_table_chopped.ppm
+[INFO]: Testing with -d option
+Invoking: timeout 30s image_retrieval -d ../A3_testcases/actual_same_image ../A3_testcases//source_images/actual_same_image.ppm
+Processing all images in directory: ../A3_testcases/actual_same_image/subfolder2 
+Processing all images in directory: ../A3_testcases/actual_same_image/subfolder 
+The most similar image is ../A3_testcases/actual_same_image/subfolder/big_table_chopped.ppm with a distance of 0.000000
+[INFO]: Testing distance for actual_same_image and expecting: 0.000000
+[SUCCESS]: [CASE]: distance for actual_same_image
+[SUCCESS]: [CASE]: actual_same_image
+
+[INFO]: Testing without -d option
+Invoking: timeout 30s image_retrieval ../source_images/actual_same_image.ppm
+Processing all images in directory: ./subfolder2 
+The most similar image is ./subfolder/big_table_chopped.ppm with a distance of 0.000000
+Processing all images in directory: ./subfolder 
+[INFO]: Testing distance for actual_same_image and expecting: 0.000000
+[FAIL]: [CASE] actual_same_image
+
+[INFO]: Testing with no_sub_folder and expecting: No output or atleast program should not crash
+[INFO]: Testing with -d option
+Invoking: timeout 30s image_retrieval -d ../A3_testcases/no_sub_folder ../A3_testcases//source_images/no_sub_folder.ppm
+The most similar image is  with a distance of 340282346638528859811704183484516925440.000000
+[SUCCESS]: [CASE]: no_sub_folder
+
+TESTS (out of 55): 38.46
