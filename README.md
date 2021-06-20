@@ -1,2 +1,6 @@
 # C-image-modify-program
-this is the assignment i did for cscb09. A1 is the program which can read an ppm P3 image and do some basic operations. And A2 is the program which can build a tree and search print and insert the node by using structure. A3 is the program which can search the most similar images in the whole dir and the subdirectories and return it. It can process it by  one process and multiple process.
+This is the assignment I did for CSCB09. 
+
+* A1 is a program which can read an ppm P3 image and do some basic operations.
+* A2 is a program which can build a tree to search, print and insert the node using structure.
+* A3 is a program which can search the most similar images in the whole dir and the subdirectories and return it. It can process it by one process or multiple processes.
